@@ -1,0 +1,79 @@
+{
+  "name": "commander-gulp-styles",
+  "version": "1.0.0",
+  "description": "This project is created to compile css",
+  "main": "index.js",
+  "keywords": [
+    "build",
+    "commander sass",
+    "commander scss",
+    "commander styles",
+    "commander stylus",
+    "commander",
+    "compile",
+    "gulp sass",
+    "gulp scss",
+    "gulp styles",
+    "gulp stylus",
+    "gulp-sass",
+    "gulp-scss",
+    "gulp-stylus",
+    "npm sass",
+    "npm scss",
+    "npm stylus",
+    "sass",
+    "scss",
+    "stylus",
+    "task css"
+  ],
+  "dependencies": {
+    "autoprefixer": "^9.7.3",
+    "chalk": "^4.1.0",
+    "commander": "^3.0.2",
+    "commander-gulp-images": "git+https://github.com/jugaz/commander-gulp-images.git",
+    "commander-gulp-server":"git+https://github.com/jugaz/commander-gulp-server.git",
+    "commander-gulp-templates": "git+https://github.com/jugaz/commander-gulp-templates.git",
+    "commander-gulp-watch":"git+https://github.com/jugaz/commander-gulp-watch.git",
+    "figlet": "^1.5.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-util": "^3.0.8",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0"
+  },
+  "bin": {
+    "commander-gulp-styles": "bin/styles.js"
+  },
+  "scripts": {
+    "deploy": "npm run templates && npm run styles && npm run images && npm run svg && gulp scripts",
+    "images": "commander-gulp-images images \"frontend/src/static/images/**/*.png\" \"frontend/src/static/images/**/*.jpg\" --im \"docs/images\"",
+    "predeploy": "rm -rdf \"docs/\" && mkdir -p \"docs/\"",
+    "preinstall": "node bin/pre-cli-styles.js",
+    "scss": "node ./bin/styles.js scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles/\"",
+    "styl": "node ./bin/styles.js stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --st \"docs/styles/\"",
+    "less": "node ./bin/styles.js stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --st \"docs/styles/\"",
+    "styles": "npm run scss styl",
+    "svg": "commander-gulp-images svg \"frontend/src/static/images/**/*.svg\" --sv \"docs/images/\"",
+    "templates": "commander-gulp-templates templates \"frontend/src/templates/*.pug\" \"frontend/src/templates/**/*.pug\" --t \"docs/\"",
+    "watch": "npm run watch-templates watch-styles",
+    "watch-templates": "commander-gulp-watch w-templates \"frontend/src/templates/*.pug\"  \"frontend/src/templates/**/*.pug\" --wt \"docs/\"",
+    "watch-sass": "commander-gulp-watch w-scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --wscss \"docs/styles/\"",
+    "watch-stylus": "commander-gulp-watch w-stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --wstyl \"docs/styles/\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jugaz/commander-gulp-styles.git"
+  },
+  "author": "Jesús Antonio Ugaz Vegas",
+  "email":"jesusugazv@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jugaz/commander-gulp-styles/issues"
+  },
+  "homepage": "https://github.com/jugaz/commander-gulp-styles#readme"
+}
