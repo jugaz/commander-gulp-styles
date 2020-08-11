@@ -1,11 +1,11 @@
 {
   "name": "commander-gulp-styles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This project is created to compile css",
   "main": "./bin/styles.js",
   "author": "Jesús Antonio Ugaz Vegas",
   "email":"jesusugazv@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "bin": {
     "commander-gulp-styles": "bin/styles.js"
   },
@@ -46,6 +46,13 @@
     "type": "git",
     "url": "git+https://github.com/jugaz/commander-gulp-styles.git"
   },
+  "keywords": [
+    "styles",
+    "css",
+    "gulp",
+    "commander-gulp-styles",
+    "commander"
+  ],
   "directories": {
     "doc": "docs"
   },
