@@ -6,6 +6,7 @@ var
     autoprefixer = require('autoprefixer'),
     debug = require('gulp-debug'),
     gulp = require('gulp'),
+    less = require('gulp-less'),
     mkdirp = require('mkdirp'),
     postcss = require('gulp-postcss'),
     program = require('commander'),
