@@ -31,7 +31,7 @@ var options = {};
 program
 
     .version(
-        'commander-gulp-styles version: ' + require('../../commander-gulp-styles2/package.json').version + '\n'
+        'commander-gulp-templates version: ' + require('../package.json').version + '\n'
     )
     .option('-m, --mkdirp <path>', 'create folder', createFolder)
     .option('-r, --rimraf <path>', 'delete folder', deleteFolder)
