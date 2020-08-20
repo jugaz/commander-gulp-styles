@@ -1,6 +1,6 @@
-# Commander Gulp Images Dynamic
+# Commander Gulp Styles Dynamic
 
-<p>This project is created to compile images</p>
+<p>This project is created to compile styles</p>
  
 ![commander: version (tag)](https://img.shields.io/badge/commander-v3.0.2-blue?style=for-the-badge)
 ![gulp: version (tag)](https://img.shields.io/badge/gulp-v3.9.1-orange?style=for-the-badge)

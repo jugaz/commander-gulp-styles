@@ -1,6 +1,6 @@
 {
   "name": "commander-gulp-styles",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This project is created to compile css",
   "main": "./bin/styles.js",
   "author": "Jesús Antonio Ugaz Vegas",
