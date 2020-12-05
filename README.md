@@ -1,6 +1,6 @@
 # Commander Gulp Styles Dynamic
 
-<p>This project is created to compile styles</p>
+<p>Compilación de estilos dinámicamente</p>
  
 ![commander: version (tag)](https://img.shields.io/badge/commander-v3.0.2-blue?style=for-the-badge)
 ![gulp: version (tag)](https://img.shields.io/badge/gulp-v3.9.1-orange?style=for-the-badge)
@@ -28,8 +28,8 @@ $ commander-gulp-styles less 'entry' --lss 'ouput'
 
 ```bash
 "scripts": {
-    "scss": "commander-gulp-styles scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles/\""
-    "stylus": "commander-gulp-styles stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --st \"docs/styles/\""
-    "less": "commander-gulp-styles less \"frontend/src/static/styles/*.less\" \"frontend/src/static/styles/**/*.less\" --lss \"docs/styles/\""
+   "scss": "commander-gulp-styles scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
+   "stylus": "commander-gulp-styles stylus \"frontend/src/static/styles/*.stylus\" \"frontend/src/static/styles/**/*.stylus\" --st \"docs/styles\"",
+   "stylus": "commander-gulp-styles less \"frontend/src/static/styles/*.less\" \"frontend/src/static/styles/**/*.less\" --lss \"docs/styles\""
   }
 ```

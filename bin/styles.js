@@ -5,15 +5,13 @@
 var
     autoprefixer = require('autoprefixer'),
     debug = require('gulp-debug'),
-    gulp = require('gulp'),
     less = require('gulp-less'),
-    mkdirp = require('mkdirp'),
     postcss = require('gulp-postcss'),
     program = require('commander'),
-    rimraf = require('rimraf'),
     sass = require('gulp-sass'),
     stylus = require('gulp-stylus'),
-    util = require('gulp-util');
+    util = require('gulp-util'),
+    { src, dest, series, parallel } = require("gulp");
 
 
 /* ######################## PLUGINS ######################## */
@@ -34,32 +32,6 @@ program
     .version(
         'commander-gulp-templates version: ' + require('../package.json').version + '\n'
     )
-    .option('-m, --mkdirp <path>', 'create folder', createFolder)
-    .option('-r, --rimraf <path>', 'delete folder', deleteFolder)
-
-
-/* ######################## CREATE FOLDERS ######################## */
-function createFolder(dir) {
-    mkdirp(dir, function (err) {
-        if (err) {
-            console.error(err)
-        } else {
-            console.log(dir)
-        }
-    })
-}
-
-
-/* ######################## DELETE FOLDERS ######################## */
-function deleteFolder(dir) {
-    rimraf(dir, function (err) {
-        if (err) {
-            console.error(err)
-        } else {
-            console.log(dir)
-        }
-    })
-}
 
 /* ######################## COMMANDER SCSS ######################## */
 /*"node ./bin/styles.js scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles//*.scss\" --sc \"docs/styles/\""*/
@@ -77,7 +49,7 @@ program
         });
 
 
-        return gulp.src(input)
+        return src(input, { allowEmpty: true })
             .pipe(debug({
                 title: 'commader-gulp-styles:'
             }))
@@ -96,7 +68,7 @@ program
 
             })
             .pipe(postcss(Plugins))
-            .pipe(gulp.dest(ouput))
+            .pipe(dest(ouput))
             .on('end', function () {
                 util.log('Done!');
             });
@@ -121,7 +93,7 @@ program
 
         });
 
-        return gulp.src(input)
+        return src(input, { allowEmpty: true })
             .pipe(debug({
                 title: 'commader-gulp-styles:'
             }))
@@ -140,7 +112,7 @@ program
 
             })
             .pipe(poststylus(Plugins))
-            .pipe(gulp.dest(ouput))
+            .pipe(dest(ouput))
             .on('end', function () {
                 util.log('Done!');
             });
@@ -163,7 +135,7 @@ program
 
         });
 
-        return gulp.src(input)
+        return src(input, { allowEmpty: true })
             .pipe(debug({
                 title: 'commader-gulp-styles:'
             }))
@@ -180,7 +152,7 @@ program
 
             })
             .pipe(postcss(Plugins))
-            .pipe(gulp.dest(ouput))
+            .pipe(dest(ouput))
             .on('end', function () {
                 util.log('Done!');
             });
