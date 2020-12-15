@@ -1,6 +1,6 @@
 {
   "name": "commander-gulp-styles",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Compilación de estilos dinámicamente",
   "main": "./bin/styles.js",
   "author": "Jesús Antonio Ugaz Vegas",
@@ -24,14 +24,7 @@
     "gulp-util": "^3.0.8"
   },
   "scripts": {
-    "deploy": "npm run templates && npm run styles && npm run images && npm run svg && gulp scripts",
-    "predeploy": "rm -rdf \"docs/\" && mkdir -p \"docs/\"",
-    "preinstall": "node bin/pre-cli-styles.js",
-    "prod:scss": "node ./bin/styles.js scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles/\"",
-    "prod:styl": "node ./bin/styles.js stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --st \"docs/styles/\"",
-    "scss": "node ./bin/styles.js scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles/\"",
-    "styl": "node ./bin/styles.js stylus \"frontend/src/static/styles/*.styl\" \"frontend/src/static/styles/**/*.styl\" --st \"docs/styles/\"",
-    "styles": "npm run scss styl"
+    "preinstall": "node bin/pre-cli-styles.js"
   },
   "repository": {
     "type": "git",

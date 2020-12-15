@@ -47,7 +47,6 @@ program
             }
         });
 
-
         return src(input, { allowEmpty: true })
             .pipe(debug({
                 title: 'commader-gulp-styles:'
@@ -61,8 +60,6 @@ program
                 util.log("Error Line:", error.line);
                 util.log("Error Column:", error.column);
                 util.log("Error Msg", error.Msg);
-
-
             })
             .pipe(postcss(Plugins))
             .pipe(dest(ouput))
@@ -102,8 +99,6 @@ program
                 util.log("Error Line:", error.line);
                 util.log("Error Column:", error.column);
                 util.log("Error Msg", error.Msg);
-
-
             })
             .pipe(postcss(Plugins))
             .pipe(dest(ouput))
@@ -125,7 +120,6 @@ program
             if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "styl") {
                 return index;
             }
-
         });
 
         return src(input, { allowEmpty: true })
@@ -141,8 +135,6 @@ program
                 util.log("Error Line:", error.line);
                 util.log("Error Column:", error.column);
                 util.log("Error Msg", error.Msg);
-
-
             })
             .pipe(poststylus(Plugins))
             .pipe(dest(ouput))
@@ -163,7 +155,6 @@ program
             if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "styl") {
                 return index;
             }
-
         });
 
         return src(input, { allowEmpty: true })
@@ -182,8 +173,6 @@ program
                 util.log("Error Line:", error.line);
                 util.log("Error Column:", error.column);
                 util.log("Error Msg", error.Msg);
-
-
             })
             .pipe(poststylus(Plugins))
             .pipe(dest(ouput))
