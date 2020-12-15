@@ -47,7 +47,7 @@ program
             }
         });
 
-        console.log(input)
+
         return src(input, { allowEmpty: true })
             .pipe(debug({
                 title: 'commader-gulp-styles:'

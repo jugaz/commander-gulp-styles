@@ -34,6 +34,6 @@ $ commander-gulp-styles prod:stylus 'entry' --sc 'ouput'
 "scripts": {
    "scss": "commander-gulp-styles scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
    "stylus": "commander-gulp-styles stylus \"frontend/src/static/styles/*.stylus\" \"frontend/src/static/styles/**/*.stylus\" --st \"docs/styles\""
-    "prod:scss": "commander-gulp-styles prod:scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
+   "prod:scss": "commander-gulp-styles prod:scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
    "prod:stylus": "commander-gulp-styles prod:stylus \"frontend/src/static/styles/*.stylus\" \"frontend/src/static/styles/**/*.stylus\" --st \"docs/styles\""
 ```

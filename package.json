@@ -1,6 +1,6 @@
 {
   "name": "commander-gulp-styles",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "Compilación de estilos dinámicamente",
   "main": "./bin/styles.js",
   "author": "Jesús Antonio Ugaz Vegas",
