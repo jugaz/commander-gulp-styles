@@ -8,6 +8,7 @@ var
     postcss = require('gulp-postcss'),
     program = require('commander'),
     sass = require('gulp-sass'),
+    path = require('path'),
     stylus = require('gulp-stylus'),
     util = require('gulp-util'),
     { src, dest, series, parallel } = require("gulp");
@@ -42,7 +43,7 @@ program
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.sc;
         input = input.filter(function (index, value) {
-            if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "scss") {
+            if (path.extname(index) == ".scss") {
                 return index;
             }
         });
@@ -78,7 +79,7 @@ program
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.sc;
         input = input.filter(function (index, value) {
-            if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "scss") {
+            if (path.extname(index) == ".scss") {
                 return index;
             }
         });
@@ -117,7 +118,7 @@ program
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.st;
         input = input.filter(function (index, value) {
-            if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "styl") {
+            if (path.extname(index) == ".styl") {
                 return index;
             }
         });
@@ -152,7 +153,7 @@ program
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.st;
         input = input.filter(function (index, value) {
-            if (index.slice((index.lastIndexOf(".") - 1 >>> 0) + 2) == "styl") {
+            if (path.extname(index) == ".styl") {
                 return index;
             }
         });
