@@ -1,5 +1,5 @@
 # Commander Gulp Styles Dynamic
-
+<style>.markdown-body pre code {cursor:auto}</style>
 <p>Compilación de estilos dinámicamente</p>
  
 ![commander: version (tag)](https://img.shields.io/badge/commander-v3.0.2-blue?style=for-the-badge)
@@ -35,9 +35,11 @@ $ commander-gulp-styles prod:stylus 'entry' --st 'ouput'
 
 ```bash
 "scripts": {
-   "scss": "commander-gulp-styles scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
-   "stylus": "commander-gulp-styles stylus \"frontend/src/static/styles/*.stylus\" \"frontend/src/static/styles/**/*.stylus\" --st \"docs/styles\"",
-   "prod:scss": "commander-gulp-styles prod:scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles\"",
-   "prod:stylus": "commander-gulp-styles prod:stylus \"frontend/src/static/styles/*.stylus\" \"frontend/src/static/styles/**/*.stylus\" --st \"docs/styles\""
+   "scss": "commander-gulp-styles scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles/\"",
+   "stylus": "commander-gulp-styles stylus \"frontend/src/static/styles/*.stylus\" \"frontend/src/static/styles/**/*.stylus\" --st \"docs/styles/\"",
+   "prod:scss": "commander-gulp-styles prod:scss \"frontend/src/static/styles/*.scss\" \"frontend/src/static/styles/**/*.scss\" --sc \"docs/styles/\"",
+   "prod:stylus": "commander-gulp-styles prod:stylus \"frontend/src/static/styles/*.stylus\" \"frontend/src/static/styles/**/*.stylus\" --st \"docs/styles/\""
 }
 ```
+### Link
+https://jugaz.github.io/commander-gulp-styles/

@@ -42,9 +42,16 @@ program
     .action((input, options) => {
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.sc;
+        function error(){
+            util.log("ERROR: No es extisión válida")
+            util.log("ERROR: La extisión válida debe ser: '.scss'")
+        }
         input = input.filter(function (index, value) {
             if (path.extname(index) == ".scss") {
                 return index;
+            }
+            else if (path.extname(index) != ".scss") {
+                return error();
             }
         });
 
@@ -78,9 +85,16 @@ program
     .action((input, options) => {
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.sc;
+        function error(){
+            util.log("ERROR: No es extisión válida")
+            util.log("ERROR: La extisión válida debe ser: '.scss'")
+        }
         input = input.filter(function (index, value) {
             if (path.extname(index) == ".scss") {
                 return index;
+            }
+            else if (path.extname(index) != ".scss") {
+                return error();
             }
         });
 
@@ -117,9 +131,16 @@ program
     .action((input, options) => {
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.st;
+        function error(){
+            util.log("ERROR: No es extisión válida")
+            util.log("ERROR: La extisión válida debe ser: '.styl'")
+        }
         input = input.filter(function (index, value) {
             if (path.extname(index) == ".styl") {
                 return index;
+            }
+            else if (path.extname(index) != ".styl") {
+                return error();
             }
         });
 
@@ -152,9 +173,16 @@ program
     .action((input, options) => {
         var input = options.input || options.parent.rawArgs;
         var ouput = options.ouput || options.st;
+        function error(){
+            util.log("ERROR: No es extisión válida")
+            util.log("ERROR: La extisión válida debe ser: '.styl'")
+        }
         input = input.filter(function (index, value) {
             if (path.extname(index) == ".styl") {
                 return index;
+            }
+            else if (path.extname(index) != ".styl") {
+                return error();
             }
         });
 
