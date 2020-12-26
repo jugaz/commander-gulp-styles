@@ -1,5 +1,5 @@
 # Commander Gulp Styles Dynamic
-<style>.markdown-body pre code {cursor:auto}</style>
+
 <p>Compilación de estilos dinámicamente</p>
  
 ![commander: version (tag)](https://img.shields.io/badge/commander-v3.0.2-blue?style=for-the-badge)
